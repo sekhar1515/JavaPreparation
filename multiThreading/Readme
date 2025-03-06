@@ -1,0 +1,33 @@
+Multithreading is a Java feature that permits the execution of two or more portions of a program at the same time to maximise CPU efficiency.
+Each such portion of the program is referred to as a thread.
+Threads are lightweight processes within processes.
+Multitasking is accomplished through the use of multiprocessing and multithreading.
+Because threads share a memory, we employ multithreading rather than multiprocessing.
+They conserve memory by not allocating separate memory space, and context-switching between threads takes less time than processing.
+
+For Implementation of thread class we must either go with two ways.
+1. Runnable Interface : By Implementing Java.lang.Runnable Interface
+2. Extending Thread class: By Extending the thread class we can create constructors, objects of threads. Internally Thread class implements Runnable
+
+Different methods of Thread class :
+1. start() : start() is used to begin the thread’s execution.
+2. run() : It specifies the code to be executed by each thread.
+3. sleep():	This function sleeps a thread for the period of time provided.
+4. currentThread(): It returns a reference to the thread object that is presently running.
+5. join(): This function waits for a thread to terminate.
+6. getPriority(): This function returns the thread’s priority.
+7. getName(): getName() returns the thread’s name.
+8. setName() :  setName() modifies the thread’s name.
+9. isAlive(): isAlive() is a boolean function that determines whether or not the thread is alive.
+10. yield() : This function causes the presently running thread object to pause and allow other threads to run for a short period of time.
+11. notifyAll(): This method is used to send a notification to all of an object’s waiting threads.
+12. notify(): This function is used to send a notification to only one thread that is waiting for an item.
+
+
+Runnable Interface vs. Thread Class:
+
+The following are the key differences between using the Runnable interface and the Thread class:
+
+1. Because Java doesn’t support multiple inheritances, if we extend the Thread class, we won’t be able to extend any other classes. Our class, however, can still extend other base classes if we implement the Runnable interface.
+2. We can obtain rudimentary thread functionality by extending the Thread class, which has several built-in methods like yield() and interrupt() that aren’t available in the Runnable interface.
+3. When you use runnable, you’ll get an object that can be shared by numerous threads.
