@@ -23,7 +23,6 @@ Different methods of Thread class :
 11. notifyAll(): This method is used to send a notification to all of an object’s waiting threads.
 12. notify(): This function is used to send a notification to only one thread that is waiting for an item.
 
-
 Runnable Interface vs. Thread Class:
 
 The following are the key differences between using the Runnable interface and the Thread class:
@@ -31,3 +30,12 @@ The following are the key differences between using the Runnable interface and t
 1. Because Java doesn’t support multiple inheritances, if we extend the Thread class, we won’t be able to extend any other classes. Our class, however, can still extend other base classes if we implement the Runnable interface.
 2. We can obtain rudimentary thread functionality by extending the Thread class, which has several built-in methods like yield() and interrupt() that aren’t available in the Runnable interface.
 3. When you use runnable, you’ll get an object that can be shared by numerous threads.
+
+Thread lifecycle :
+1. New : When we use new Keyword to create a thread then it will be in new state.
+2. Runnnable : When we hit thread.start() then it goes to runnable
+3. Running : When the thread is actually running(run method triggered) then it moves to running state
+4. Waiting: Thread is waiting indefinitely for other thread to notify it
+5. Blocked :  Waiting for a locked resource to be released.
+6. Terminated: Thread has finished execution or stopped.
+
