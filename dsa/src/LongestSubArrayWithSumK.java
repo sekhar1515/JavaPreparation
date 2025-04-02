@@ -36,6 +36,7 @@ public class LongestSubArrayWithSumK {
         }
         return maxLengthOfSubArray;
     }
+
     public static void main(String[] args) {
         int ans = longestSubarray(new int[]{94, -33, -13, 40, -82, 94, -33, -13, 40, -82
         }, 52);
