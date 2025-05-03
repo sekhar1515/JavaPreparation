@@ -15,6 +15,9 @@ public class MobilePhone implements WeatherObservable {
 
     @Override
     public void notifyObservers(double humidity, double temperature, double pressure) {
-        System.out.println("weather now is : " + humidity + "," + temperature + "," + pressure);
+        this.humidity = humidity;
+        this.temperature = temperature;
+        this.pressure = pressure;
+        System.out.println("weather now is : " + this.humidity + "," + this.temperature + "," + this.pressure);
     }
 }
