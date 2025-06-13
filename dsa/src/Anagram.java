@@ -34,6 +34,8 @@ public class Anagram {
         if (s.length() != t.length()) {
             return false;
         }
+        s = s.toLowerCase();
+        t = t.toLowerCase();
 
         int[] count = new int[26]; // Assuming only lowercase letters a-z
         for (int i = 0; i < s.length(); i++) {
