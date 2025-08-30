@@ -1,8 +1,6 @@
 package synchronization;
 
-import lombok.Getter;
 
-@Getter
 public class NonSynchronized implements Runnable{
     private int count = 0;
     @Override
