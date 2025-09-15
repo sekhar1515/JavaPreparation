@@ -1,5 +1,3 @@
-import creation.CreationByExtendingThread;
-import creation.CreationByImplementingRunnable;
 import synchronization.NonSynchronized;
 import synchronization.Synchronized;
 
