@@ -172,11 +172,6 @@ public class MapDeepDive {
      *   synchronized (m) { for (Map.Entry<K,V> e : m.entrySet()) { ... } }
      */
 
-    /* ================================================================
-     * 11) Practical Recipes (compact)
-     * ================================================================
-     */
-
     /**
      * Simple LRU cache using LinkedHashMap (access-order).
      */

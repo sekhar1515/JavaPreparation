@@ -27,11 +27,11 @@ public class Synchronized implements Runnable {
 
     // Synchronization at block level
     // Synchronization can also happen at block level where the logic is restricted to block only
-    public void withdrawBlockLevel(int amount){
+    public void withdrawBlockLevel(int amount) {
         synchronized (this) {
             if (amount > balance) {
                 System.out.println("amount exceeds balance" + Thread.currentThread().getName() + ": " + amount);
-            }else {
+            } else {
                 balance -= amount;
                 System.out.println("updated Balance = " + balance + Thread.currentThread().getName());
             }

@@ -138,7 +138,8 @@ public class Streams {
 
         // 3) Sum salary per department (BigDecimal with reducing)
         Map<String, BigDecimal> employeeSalaryByDept =
-                employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.reducing(BigDecimal.ZERO, Employee::getSalary, BigDecimal::add)));
+                employeeList.stream().collect(Collectors.groupingBy(Employee::getDept,
+                        Collectors.reducing(BigDecimal.ZERO, Employee::getSalary, BigDecimal::add)));
         employeeSalaryByDept.forEach((x, y) -> {
             System.out.println("Employee salary for dept : " + x + " is " + y);
         });
